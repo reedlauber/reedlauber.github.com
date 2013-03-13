@@ -1,0 +1,84 @@
+/* RWD Helper Classes */
+.screen-large, .screen-medium, .screen-small, .screen-mobile,
+.screen-large-down, .screen-medium-down, .screen-small-down, .screen-mobile-down {
+	display: none;
+}
+.screen-full {
+	display: block;
+}
+a.screen-full, span.screen-full, strong.screen-full {
+	display: inline;
+}
+@media (max-width: 1280px) {
+	.screen-full {
+		display: none;
+	}
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+	.screen-large {
+		display: block;
+	}
+	a.screen-large, span.screen-large, strong.screen-large, {
+		display: inline;
+	}
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+	.screen-medium {
+		display: block;
+	}
+	a.screen-medium, span.screen-medium, strong.screen-medium {
+		display: inline;
+	}
+}
+@media (max-width: 768px) and (min-width: 569px) {
+	.screen-small {
+		display: block;
+	}
+	a.screen-small, span.screen-small, strong.screen-small {
+		display: inline;
+	}
+}
+@media (max-width: 568px) {
+	.screen-mobile {
+		display: block;
+	}
+	a.screen-mobile, span.screen-mobile, strong.screen-mobile {
+		display: inline;
+	}
+}
+
+/* Shrink Search Box to Icon */
+@media (max-width: 1280px) {
+	.screen-large-down {
+		display: block;
+	}
+	a.screen-large-down, span.screen-large-down, strong.screen-large-down {
+		display: inline;
+	}
+}
+/* Shrink Workspace,Account to Icons */
+@media (max-width: 1024px) {
+	.screen-medium-down {
+		display: block;
+	}
+	a.screen-medium-down, span.screen-medium-down, strong.screen-medium-down {
+		display: inline;
+	}
+}
+/* Change orientation (sidebar to top) */
+@media (max-width: 768px) {
+	.screen-small-down {
+		display: block;
+	}
+}
+/* Move System Nav to Footer */
+@media (max-width: 568px) {
+	.screen-mobile-down {
+		display: block;
+	}
+	a.screen-mobile-down, span.screen-mobile-down, strong.screen-mobile-down {
+		display: inline;
+	}
+}
+@media (max-width: 480px) {
+}
