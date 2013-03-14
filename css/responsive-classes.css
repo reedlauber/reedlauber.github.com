@@ -1,4 +1,4 @@
-/* RWD Helper Classes */
+/* Hide everything that shouldn't be visible at full screen */
 .screen-large, .screen-medium, .screen-small, .screen-mobile,
 .screen-large-down, .screen-medium-down, .screen-small-down, .screen-mobile-down {
 	display: none;
@@ -9,6 +9,7 @@
 a.screen-full, span.screen-full, strong.screen-full {
 	display: inline;
 }
+/* Only turn on classes in their specific range (exclusives) */
 @media (max-width: 1280px) {
 	.screen-full {
 		display: none;
@@ -47,8 +48,7 @@ a.screen-full, span.screen-full, strong.screen-full {
 	}
 }
 
-
-/* Shrink Search Box to Icon */
+/* Turn on -downs and off -ups as we move down through sizes (Inclusives) */
 @media (max-width: 1280px) {
 	.screen-large-down {
 		display: block;
@@ -60,7 +60,6 @@ a.screen-full, span.screen-full, strong.screen-full {
 		display: none;
 	}
 }
-/* Shrink Workspace,Account to Icons */
 @media (max-width: 1024px) {
 	.screen-medium-down {
 		display: block;
@@ -72,7 +71,6 @@ a.screen-full, span.screen-full, strong.screen-full {
 		display: none;
 	}
 }
-/* Change orientation (sidebar to top) */
 @media (max-width: 768px) {
 	.screen-small-down {
 		display: block;
@@ -81,7 +79,6 @@ a.screen-full, span.screen-full, strong.screen-full {
 		display: none;
 	}
 }
-/* Move System Nav to Footer */
 @media (max-width: 568px) {
 	.screen-mobile-down {
 		display: block;
@@ -92,6 +89,4 @@ a.screen-full, span.screen-full, strong.screen-full {
 	.screen-small-up {
 		display: none;
 	}
-}
-@media (max-width: 480px) {
 }
