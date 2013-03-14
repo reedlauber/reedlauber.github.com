@@ -47,6 +47,7 @@ a.screen-full, span.screen-full, strong.screen-full {
 	}
 }
 
+
 /* Shrink Search Box to Icon */
 @media (max-width: 1280px) {
 	.screen-large-down {
@@ -54,6 +55,9 @@ a.screen-full, span.screen-full, strong.screen-full {
 	}
 	a.screen-large-down, span.screen-large-down, strong.screen-large-down {
 		display: inline;
+	}
+	.screen-full-up {
+		display: none;
 	}
 }
 /* Shrink Workspace,Account to Icons */
@@ -64,11 +68,17 @@ a.screen-full, span.screen-full, strong.screen-full {
 	a.screen-medium-down, span.screen-medium-down, strong.screen-medium-down {
 		display: inline;
 	}
+	.screen-large-up {
+		display: none;
+	}
 }
 /* Change orientation (sidebar to top) */
 @media (max-width: 768px) {
 	.screen-small-down {
 		display: block;
+	}
+	.screen-medium-up {
+		display: none;
 	}
 }
 /* Move System Nav to Footer */
@@ -78,6 +88,9 @@ a.screen-full, span.screen-full, strong.screen-full {
 	}
 	a.screen-mobile-down, span.screen-mobile-down, strong.screen-mobile-down {
 		display: inline;
+	}
+	.screen-small-up {
+		display: none;
 	}
 }
 @media (max-width: 480px) {

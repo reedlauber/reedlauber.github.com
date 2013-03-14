@@ -5,15 +5,30 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsive-classes.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsive-classes-page.css" />
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css' />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<h1>Responsive Classes</h1>
 
-		<section>
-			<h2>Reference</h2>
-			<div class="sample">
+		<section class="well">
+			<p>&rarr; An experiment in reusable classes to handle visibility changes across RWD break points.</p>
+
+			<p>&rarr; Resize browser window to see elements change state.</p>
+
+			<p>&rarr; Each class can be added to an element that should be only be visible when the viewport size is in that range.</p>
+
+			<p>&rarr; Classes can be combined to allow an element to span multiple ranges.</p>
+
+			<p>&rarr; The -down and -up versions can be used for elements that should start in a particular range and be visible for all smaller sizes, or larger sizes, respectively.</p>
+
+			<p><a href="https://github.com/reedlauber/reedlauber.github.com/blob/master/css/responsive-classes.css" target="_blank">View CSS Source</a></p>
+		</section>
+
+		<section id="sample-section">
+			<h2>Break Points Reference</h2>
+			<div id="sample" class="sample">
 				<div style="width:1280px">
 					<div style="width:1024px">
 						<div style="width:768px">
@@ -29,14 +44,16 @@
 				<span>Full</span>
 			</div>
 		</section>
+		<div id="sample-section-ghost" class="sample-ghost">
+		</div>
 
 		<section>
 			<h2>Mutually Exclusive</h2>
 			<p class="section screen-full">
-				<span class="label">.screen-full (> 1280px)</span>
+				<span class="label">.screen-full (&gt; 1280px)</span>
 			</p>
 			<p class="section section-hidden screen-large screen-medium screen-small screen-mobile">
-				<span class="label">.screen-full (> 1280px)</span>
+				<span class="label">.screen-full (&gt; 1280px)</span>
 			</p>
 
 			<p class="section screen-large">
@@ -61,58 +78,20 @@
 			</p>
 
 			<p class="section screen-mobile">
-				<span class="label">.screen-mobile (< 568px)</span>
+				<span class="label">.screen-mobile (&lt; 568px)</span>
 			</p>
 			<p class="section section-hidden screen-full screen-large screen-medium screen-small">
-				<span class="label">.screen-mobile (< 568px)</span>
+				<span class="label">.screen-mobile (&lt; 568px)</span>
 			</p>
 		</section>
 
 		<section>
-			<h2>Inclusive</h2>
+			<h2>Combining Exclusive</h2>
 			<p class="section screen-full">
-				<span class="label">.screen-full (> 1280px)</span>
+				<span class="label">.screen-full (&gt; 1280px)</span>
 			</p>
 			<p class="section section-hidden screen-large screen-medium screen-small screen-mobile">
-				<span class="label">.screen-full (> 1280px)</span>
-			</p>
-
-			<p class="section screen-large-down">
-				<span class="label">.screen-large-down (< 1280px)</span>
-			</p>
-			<p class="section section-hidden screen-full">
-				<span class="label">.screen-large-down (< 1280px)</span>
-			</p>
-
-			<p class="section screen-medium-down">
-				<span class="label">.screen-medium-down (< 1024px)</span>
-			</p>
-			<p class="section section-hidden screen-full screen-large">
-				<span class="label">.screen-medium-down (< 1024px)</span>
-			</p>
-
-			<p class="section screen-small-down">
-				<span class="label">.screen-small-down (< 768px)</span>
-			</p>
-			<p class="section section-hidden screen-full screen-large screen-medium">
-				<span class="label">.screen-small-down (< 768px)</span>
-			</p>
-
-			<p class="section screen-mobile-down">
-				<span class="label">.screen-mobile-down (< 568px)</span>
-			</p>
-			<p class="section section-hidden screen-full screen-large screen-medium screen-small">
-				<span class="label">.screen-mobile-down (< 568px)</span>
-			</p>
-		</section>
-
-		<section>
-			<h2>Combined</h2>
-			<p class="section screen-full">
-				<span class="label">.screen-full (> 1280px)</span>
-			</p>
-			<p class="section section-hidden screen-large screen-medium screen-small screen-mobile">
-				<span class="label">.screen-full (> 1280px)</span>
+				<span class="label">.screen-full (&gt; 1280px)</span>
 			</p>
 
 			<p class="section screen-large screen-medium">
@@ -137,19 +116,111 @@
 			</p>
 
 			<p class="section screen-small screen-mobile">
-				<span class="label">.screen-small .screen-mobile (< 768px)</span>
+				<span class="label">.screen-small .screen-mobile (&lt; 768px)</span>
 			</p>
 			<p class="section section-hidden screen-full screen-large screen-medium">
-				<span class="label">.screen-small .screen-mobile (< 768px)</span>
+				<span class="label">.screen-small .screen-mobile (&lt; 768px)</span>
 			</p>
 
 			<p class="section screen-mobile">
-				<span class="label">.screen-mobile (< 568px)</span>
+				<span class="label">.screen-mobile (&lt; 568px)</span>
 			</p>
 			<p class="section section-hidden screen-full screen-large screen-medium screen-small">
-				<span class="label">.screen-mobile (< 568px)</span>
+				<span class="label">.screen-mobile (&lt; 568px)</span>
+			</p>
+		</section>
+
+		<section>
+			<h2>Inclusive (Down)</h2>
+			<p class="section">
+				<span class="label">*</span>
+			</p>
+
+			<p class="section screen-large-down">
+				<span class="label">.screen-large-down (&lt; 1280px)</span>
+			</p>
+			<p class="section section-hidden screen-full">
+				<span class="label">.screen-large-down (&lt; 1280px)</span>
+			</p>
+
+			<p class="section screen-medium-down">
+				<span class="label">.screen-medium-down (&lt; 1024px)</span>
+			</p>
+			<p class="section section-hidden screen-full screen-large">
+				<span class="label">.screen-medium-down (&lt; 1024px)</span>
+			</p>
+
+			<p class="section screen-small-down">
+				<span class="label">.screen-small-down (&lt; 768px)</span>
+			</p>
+			<p class="section section-hidden screen-full screen-large screen-medium">
+				<span class="label">.screen-small-down (&lt; 768px)</span>
+			</p>
+
+			<p class="section screen-mobile">
+				<span class="label">.screen-mobile (&lt; 568px)</span>
+			</p>
+			<p class="section section-hidden screen-full screen-large screen-medium screen-small">
+				<span class="label">.screen-mobile (&lt; 568px)</span>
+			</p>
+		</section>
+
+		<section>
+			<h2>Inclusive (Up)</h2>
+			<p class="section screen-full-up">
+				<span class="label">.screen-full (> 1280px)</span>
+			</p>
+			<p class="section section-hidden screen-large screen-medium screen-small screen-mobile">
+				<span class="label">.screen-full (> 1280px)</span>
+			</p>
+
+			<p class="section screen-large-up">
+				<span class="label">.screen-large-up (> 1280px)</span>
+			</p>
+			<p class="section section-hidden screen-medium screen-small screen-mobile">
+				<span class="label">.screen-large-up (> 1280px)</span>
+			</p>
+
+			<p class="section screen-medium-up">
+				<span class="label">.screen-medium-up (> 1024px)</span>
+			</p>
+			<p class="section section-hidden screen-small screen-mobile">
+				<span class="label">.screen-medium-up (> 1024px)</span>
+			</p>
+
+			<p class="section screen-small-up">
+				<span class="label">.screen-small-up (> 768px)</span>
+			</p>
+			<p class="section section-hidden screen-mobile">
+				<span class="label">.screen-small-up (> 768px)</span>
+			</p>
+
+			<p class="section">
+				<span class="label">*</span>
 			</p>
 		</section>
 	</div>
+	<script>
+		$(function() {
+			var $window = $(window),
+				$sample = $('#sample-section'),
+				top = $sample.offset().top,
+				height = $sample.outerHeight(),
+				$ghost = $('#sample-section-ghost').hide().height(height),
+				fixed = false;
+
+			$window.scroll(function() {
+				if(window.scrollY > top && !fixed) {
+					$sample.addClass('fixed');
+					$ghost.show();
+					fixed = true;
+				} else if(window.scrollY <= top && fixed) {
+					$sample.removeClass('fixed');
+					$ghost.hide();
+					fixed = false;
+				}
+			}).scroll();
+		});
+	</script>
 </body>
 </html>
